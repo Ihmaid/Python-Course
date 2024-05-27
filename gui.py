@@ -1,6 +1,11 @@
 import functions  # Import the created library of functions
 import FreeSimpleGUI as Sg  # Import the third-party library that allows the GUI manipulations
 import time
+import os  # This library is used to create a new todos.txt archive when the system do not have one
+
+if not os.path.exists("todos.txt"):
+    with open("todos.txt", "w") as files:
+        pass
 
 Sg.theme("LightBrown11")
 
